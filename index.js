@@ -3,7 +3,7 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 connectDB();
 
@@ -15,6 +15,6 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 
-app.listen(PORT, () => {
-  console.log(`Server is Working on Port ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is Working on port ${PORT}`);
 });
