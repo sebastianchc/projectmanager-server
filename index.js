@@ -14,6 +14,6 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 
-app.listen(process.env.port || 4000, () => {
-  console.log(`Server is Working on port ${process.env.port || 4000}`);
+app.listen(process.env.port || 5000, () => {
+  console.log('Server is Working');
 });
